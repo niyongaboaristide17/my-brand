@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#body-landing {
+    background: url(../media/profile/cover-profile.jpg);
+    object-fit: cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+#about-landing {
+    /* background: url(../media/profile/cover-profile.jpg); */
+    object-fit: cover;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    /* height: 8%; */
+    background: linear-gradient(89.96deg, rgba(34, 34, 34, 0.1) 0.03%, rgba(196, 196, 196, 0.05) 99.96%);
+}
+
+#body-landing>.container {
+    background-color: #222222;
+    height: 100vh;
+    opacity: 0.8;
+}
+
+#about-landing>.container {
+    background-color: #222222;
+    height: 100vh;
+    opacity: 0.8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px 20px; */
+    /* padding: 0; */
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #C4C4C4;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #C4C4C4;
+    transition: all 0.3s ease 0s;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+.nav-links li a {
+    color: #FFFFFF;
+}
+
+.logo {
+    background-color: #FFF;
+    padding: 0px 20px;
+    /* bottom: 0; */
+    /* top: 0; */
+}
+
+.home-flex {
+    display: flex;
+    width: 100%;
+}
+
+.introduction {
+    width: 60%;
+}
+
+.profile {
+    width: 40%;
+}
+
+.introduction-content {
+    padding-top: 25%;
+    padding-left: 15%;
+    color: #C4C4C4;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.profile-images {
+    padding-top: 35%;
+}
+
+header>.logo>a {
+    text-decoration: none;
+    font-size: 36;
+    font-weight: bold;
+    color: #2C2C2C;
+}
+
+.github-content {
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    background-color: white;
+    padding: 100px 20px;
+}
+
+.github-content>a>img {
+    width: 50px;
+}
+
+.resume {
+    margin-right: 40%;
+    float: right;
+    background-color: #0288D1;
+    color: #fff;
+    width: 110px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5%;
+}
+
+.profile-design {
+    width: 300px;
+    height: 200px;
+    border: 2px solid white;
+    box-shadow: 0 0 30px #fff;
+    position: absolute;
+}
+
+.profile-image {
+    width: 300px;
+    height: 200px;
+    transform: rotate(-10deg);
+    position: absolute;
+    object-fit: cover;
+    opacity: 100%;
+    z-index: 2;
+}
+
+.profile-about {
+    width: 40%;
+    padding-left: 15%;
+}
+
+.skills {
+    padding-top: 25%;
+    /* padding-left: 15%; */
+    color: #C4C4C4;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-about>.profile-images {
+    padding-top: 15%;
+}
+
+.about-title {
+    color: #5B5B53;
+    padding-top: 30%;
+    padding-left: 10%;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.experience-title {
+    font-size: 36px;
+}
+
+.experience-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #C4C4C4;
+    margin-top: 5px;
+    border-radius: 30px;
+}
+
+.experience-name {
+    font-size: 20px;
+}
+
+.html {
+    width: 90%;
+    height: 10px;
+    background-color: #7FAB22;
+    border-radius: 15px;
+}
+
+.css {
+    width: 70%;
+    height: 10px;
+    background-color: #DEC023;
+    border-radius: 15px;
+}
+
+.js {
+    width: 20%;
+    height: 10px;
+    background-color: #DF3510;
+    border-radius: 15px;
+}
