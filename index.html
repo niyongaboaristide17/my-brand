@@ -6,42 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./css/all.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/profile-image.css">
+    <link rel="stylesheet" href="./css/landing-responsive.css">
 </head>
 
-<body id="body-landing">
-    <div class="container">
-        <div class="github-content">
-            <a href="https://github.com/niyongaboaristide17" target="_blank"><img src="./media/github.png" alt="github logo"></a>
+<body>
+
+    <nav id="navbar">
+        <div class="logo-container">
+            <div class="logo">
+                <a href="./index.html">NA</a>
+            </div>
         </div>
-        <header>
-            <div class="logo"><a href="./index.html">NA</a></div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="./pages/about.html">About</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Sign In</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="home-flex">
+        <ul>
+            <li><a href="./pages/about.html">About</a></li>
+            <li><a href="./pages/portfolio.html">Portfolio</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Admin</a></li>
+        </ul>
+    </nav>
+    <div id="nav-toggle" onclick="toggle()">
+        <div class="toggle-button">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <main>
+        <div class="row">
+            <div class="col-1">
+                <div class="github-content">
+                    <a href="https://github.com/niyongaboaristide17" target="_blank"><img src="./media/github.png" alt="github logo"></a>
+                </div>
+            </div>
+            <div class="col-2">
                 <div class="introduction">
-                    <div class="introduction-content">
-                        <div>
-                            <span class="greeting">Hi!</span>
-                        </div>
-                        <div><span>I'm </span><span>Aristide NIYONGABO</span></div>
-                        <div>A <span>Software Engineer</span></div>
-                        <div style="width: 100%">
-                            <input class="resume" type="button" value="Resume">
-                        </div>
+                    <div>
+                        <span class="greeting">Hi!</span>
+                    </div>
+                    <div><span>I'm </span><span style="color: #828282">Aristide NIYONGABO</span></div>
+                    <div>A <span class="color-5B5B53">Software Engineer</span></div>
+                    <div style="width: 100%">
+
+                        <a href="">
+                            <div class="resume">Resume</div>
+                        </a>
+
                     </div>
                 </div>
+            </div>
+            <div class="col-3">
                 <div class="profile">
                     <div class="profile-images">
                         <div class="profile-design">
@@ -51,9 +69,24 @@
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+    <script>
+        var toogleNav = window.matchMedia("(max-width: 768px)")
 
+        function toggle() {
+            toogleNav = !toogleNav
+            if (toogleNav) {
+                document.getElementById("navbar").style.display = "block"
+            } else {
+                document.getElementById("navbar").style.display = "none"
+            }
+            console.log('Hello');
+
+        }
+
+        toogle();
+    </script>
 </body>
 
 </html>

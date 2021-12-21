@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    background-image: #222222;
+    font-family: poppins;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    height: 100%
+}
+
+main {
+    margin-top: 50 px;
+    background-color: rgba(34, 34, 34, 0.95);
+    width: 100%;
+    height: 100%
+}
+
+.col-1 {
+    /* background-color: blue; */
+    height: 100%;
+    width: 10%;
+}
+
+.col-3 {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 50%;
+}
+
+.col-2 {
+    /* background-color: pink; */
+    height: 100%;
+    width: 40%;
+}
+
+.experience-title {
+    font-size: 36px;
+}
+
+.experience-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #C4C4C4;
+    margin-top: 5px;
+    border-radius: 30px;
+}
+
+.experience-name {
+    font-size: 20px;
+}
+
+.html {
+    width: 90%;
+    height: 10px;
+    background-color: #7FAB22;
+    border-radius: 15px;
+}
+
+.css {
+    width: 70%;
+    height: 10px;
+    background-color: #DEC023;
+    border-radius: 15px;
+}
+
+.js {
+    width: 20%;
+    height: 10px;
+    background-color: #DF3510;
+    border-radius: 15px;
+}
+
+.skills {
+    margin-top: 30%;
+    font-weight: bold;
+}
+
+.skills p {
+    font-size: 20px;
+    width: 80%;
+}

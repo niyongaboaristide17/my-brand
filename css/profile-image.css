@@ -1,0 +1,35 @@
+.profile-design {
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    box-shadow: 0 0 30px #fff;
+    position: absolute;
+}
+
+.profile-image {
+    width: 300px;
+    height: 200px;
+    transform: rotate(-10deg);
+    position: absolute;
+    object-fit: cover;
+    opacity: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .profile-design {
+        width: 100%;
+        border: none;
+        box-shadow: 0 0 0px #fff;
+        position: static;
+        display: none;
+    }
+    .profile-image {
+        width: 100%;
+        transform: rotate(0deg);
+        position: static;
+        object-fit: cover;
+        opacity: 100%;
+        z-index: -1;
+    }
+}

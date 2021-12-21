@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+    height: calc(100% - 50px);
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    color: #C4C4C4;
+    margin: 0;
+    padding: 0;
+}
+
+.github-content {
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    background-color: #C4C4C4;
+    padding: 100px 20px;
+    z-index: 3;
+}
+
+.github-content>a>img {
+    width: 30px;
+}
+
+@media (max-width: 768px) {
+    .github-content {
+        position: static;
+        width: 100%;
+        background-color: #C4C4C4;
+        padding: 20px 0;
+        z-index: 3;
+        text-align: center;
+    }
+    html {
+        height: 100%;
+        margin: 0;
+    }
+}
+
+.page-title {
+    color: #5B5B53;
+    padding-top: 20%;
+    padding-left: 10%;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
