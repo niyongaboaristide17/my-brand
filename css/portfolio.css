@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    background-image: #222222;
+    font-family: poppins;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    height: 100%
+}
+
+main {
+    margin-top: 50 px;
+    background-color: rgba(34, 34, 34, 0.95);
+    width: 100%;
+    height: 100%
+}
+
+.col-1 {
+    /* background-color: blue; */
+    height: 100%;
+    width: 10%;
+}
+
+.col-3 {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 60%;
+}
+
+.col-2 {
+    /* background-color: pink; */
+    height: 100%;
+    width: 30%;
+}
+
+.portfolio {
+    margin-top: 10%;
+    margin-right: 30px;
+}
+
+.portfolio-card {
+    margin-top: 15px;
+    background-color: #575750;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex
+}
+
+.portfolio-description {
+    margin: 0 5px;
+}
+
+.portfolio-description>span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.portfolio-description>div>span {
+    font-size: 14px;
+}
+
+.portfolio-card img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
