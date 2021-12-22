@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background-image: #222222;
+    font-family: poppins;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    height: 100%
+}
+
+main {
+    margin-top: 50 px;
+    background-color: rgba(34, 34, 34, 0.95);
+    width: 100%;
+    height: 100%
+}
+
+.col-1 {
+    /* background-color: blue; */
+    height: 100%;
+    width: 10%;
+}
+
+.col-3 {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 60%;
+    /* width: 10%; */
+    /* background-color: yellow; */
+}
+
+.col-2 {
+    /* background-color: pink; */
+    height: 100%;
+    width: 30%;
+    /* background-color: blue; */
+}
+
+.blogs {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    overflow-y: scroll;
+    margin-right: 30px;
+}
+
+.article-card>img {
+    width: 200px;
+}
+
+.article-title {
+    font-weight: bold;
+}
