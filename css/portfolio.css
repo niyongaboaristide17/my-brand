@@ -54,7 +54,9 @@ main {
 }
 
 .portfolio-description {
-    margin: 0 5px;
+    margin: 0 20px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .portfolio-description>span {
@@ -64,6 +66,8 @@ main {
 
 .portfolio-description>div>span {
     font-size: 14px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .portfolio-card img {
