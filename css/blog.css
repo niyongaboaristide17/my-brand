@@ -76,6 +76,7 @@ body {
 
 .container {
     height: auto;
+
 }
 
 @media (max-width: 768px) {
@@ -124,4 +125,5 @@ body {
         border-radius: 5px;
         margin-bottom: 20px;
     }
+
 }
