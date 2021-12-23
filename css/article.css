@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    background-image: #222222;
+    font-family: poppins;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    height: 100%
+}
+
+main {
+    margin-top: 50 px;
+    background-color: rgba(34, 34, 34, 0.95);
+    width: 100%;
+    height: 100%
+}
+
+.col-1 {
+    /* background-color: blue; */
+    height: 100%;
+    width: 10%;
+}
+
+.col-3 {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 60%;
+    /* width: 10%; */
+    /* background-color: yellow; */
+}
+
+.col-2 {
+    /* background-color: pink; */
+    height: 100%;
+    width: 30%;
+    /* position: fixed; */
+    /* background-color: blue; */
+}
+
+.article-image>img {
+    width: 300px;
+    border: 10px solid #ffffff;
+    border-radius: 15px;
+    position: fixed;
+}
+
+.article {
+    background: #FFFFFF;
+    /* margin-left: 20px; */
+    width: 80%;
+    height: auto;
+    margin: 100px auto;
+    border-radius: 15px;
+    padding: 30px 30px;
+    color: #222222;
+}
+
+.article>.article-title {
+    width: 100%;
+}
+
+.article>.article-content {
+    margin-top: 30px;
+    width: 100%;
+    text-align: justify;
+}
+
+body {
+    height: auto;
+}
+
+.container {
+    height: auto;
+}
+
+.article-like-count {
+    margin-left: 10px;
+    background-color: #222222;
+    color: #fff;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.article-comment>textarea {
+    background-color: #222222;
+    color: #FFFFFF;
+    width: 100%;
+    resize: none;
+}
+
+.article-comment>button {
+    border: none;
+    background-color: #222222;
+    color: #FFFFFF;
+    resize: none;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.author-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.article-author {
+    display: flex;
+}
+
+.article-description {
+    margin-left: 20px;
+}
+
+.a-comment {
+    width: 100%;
+    border: 1px solid #222222;
+    margin-bottom: 10px;
+}
+
+.comment-header {
+    background-color: #575750;
+    display: flex;
+    width: 100%;
+}
+
+.comment-header>* {
+    margin: 0 10px;
+}
+
+.commment-body>p {
+    margin: 0 10px;
+}

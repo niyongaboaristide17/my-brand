@@ -55,10 +55,25 @@ main {
     margin-right: 30px;
 }
 
+.articles>a {
+    margin-bottom: 40px;
+}
+
 .article-card>img {
     width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #FFFFFF;
 }
 
 .article-title {
     font-weight: bold;
+}
+
+body {
+    height: auto;
+}
+
+.container {
+    height: auto;
 }
