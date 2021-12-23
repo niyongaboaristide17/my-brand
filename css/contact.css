@@ -52,7 +52,7 @@ main {
 }
 
 .contact-info {
-    font-size: 16px;
+    font-size: 27px;
     font-weight: bold;
 }
 
@@ -66,8 +66,8 @@ main {
 }
 
 .form-group>div {
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 10px;
     padding-top: 10px;
 }
@@ -97,4 +97,46 @@ main {
     color: #222222;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 0;
+        z-index: 1;
+    }
+    .row {
+        display: block;
+        height: auto;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .col-3 {
+        width: 100%;
+        height: auto;
+        /* margin-bottom: 5px; */
+    }
+    body {
+        height: auto;
+    }
+    html {
+        height: 100%;
+    }
+    .form-card {
+        background-color: #575750;
+        width: 100%;
+        height: auto;
+        margin: 100px auto;
+        border-radius: 0px;
+    }
+    .contact-info {
+        font-size: 17px;
+        text-align: center;
+    }
 }

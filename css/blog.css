@@ -77,3 +77,51 @@ body {
 .container {
     height: auto;
 }
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 0;
+        z-index: 1;
+    }
+    .row {
+        display: block;
+        height: auto;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .col-3 {
+        width: 100%;
+        height: auto;
+    }
+    body {
+        height: auto;
+    }
+    html {
+        height: auto;
+    }
+    .articles {
+        display: block;
+        grid-template-columns: none;
+        overflow-y: none;
+        margin-right: 0;
+        padding: 0 20px;
+    }
+    .blogs>h1 {
+        padding: 0 20px;
+    }
+    .article-card>img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+}

@@ -139,3 +139,51 @@ body {
 .commment-body>p {
     margin: 0 10px;
 }
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 0;
+        z-index: 1;
+    }
+    .row {
+        display: block;
+        height: auto;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        /* background: #222222; */
+    }
+    .col-3 {
+        width: 100%;
+        height: auto;
+        /* background: #222222; */
+    }
+    body {
+        height: auto;
+    }
+    html {
+        height: 100%;
+    }
+    .container {
+        height: 100%;
+    }
+    .article-image>img {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        position: static;
+    }
+    .article>.article-content {
+        margin-top: 0px;
+        width: 100%;
+    }
+    .toggle-button div {
+        border: 1px solid #c4c4c4;
+    }
+}
