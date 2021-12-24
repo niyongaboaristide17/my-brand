@@ -5,7 +5,8 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(89.96deg, rgba(34, 34, 34, 0.1) 0.03%, rgba(196, 196, 196, 0.05) 99.96%);
+    /* background: linear-gradient(89.96deg, rgba(34, 34, 34, 0.1) 0.03%, rgba(196, 196, 196, 0.05) 99.96%); */
+    background-color: #1f1e1e;
 }
 
 nav ul {
