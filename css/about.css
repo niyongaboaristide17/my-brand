@@ -86,3 +86,54 @@ main {
     font-size: 20px;
     width: 80%;
 }
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 0;
+        z-index: 1;
+    }
+    .row {
+        display: block;
+        height: auto;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .col-3 {
+        width: 100%;
+        height: auto;
+    }
+    .skills {
+        margin-top: 10px;
+        font-weight: bold;
+        border-top: 1px solid #FFFFFF;
+        padding: 0;
+        margin: 0;
+        text-align: justify;
+        padding: 0 20px;
+        padding-bottom: 50px;
+    }
+    body {
+        height: auto;
+    }
+    html {
+        height: auto;
+    }
+    .profile {
+        padding: 0;
+        margin: 0;
+    }
+    .profile * {
+        padding: 0;
+        margin: 0;
+    }
+    .experience-bar {
+        width: 100%;
+    }
+}

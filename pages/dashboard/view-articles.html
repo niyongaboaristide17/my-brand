@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | articles</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- <link rel="stylesheet" href="../../css/nav.css"> -->
+    <link rel="stylesheet" href="../../css/dashboard-view-articles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="../../media/profile/profile-home.jpg" alt="profile_picture">
+                <h3>Aristide NIYONGABO</h3>
+                <!-- <p>niyongaboaristide17@gmail.com</p> -->
+            </div>
+            <ul>
+                <li>
+                    <a href="../../index.html">
+                        <span class="icon"><i class="fa fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./view-articles.html" class="active">
+                        <span class="icon"><i class="fa fa-newspaper"></i></span>
+                        <span class="item">Articles</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-comment"></i></span>
+                        <span class="item">Queries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="item">Profile</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="../signin.html">
+                        <span><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        <span class="item">Sign out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="container">
+            <form action="./create-article.html">
+                <button class="btn btn-grey">
+                    CREATE ARTICLE
+                </button>
+            </form>
+            <div class="articles">
+                <div class="article">
+                    <img src="../../media/article-image-ms.jpg" alt="">
+                    <div class="article-title">
+                        Microsoft brings JavaScript to Excel
+                    </div>
+                    <div class="article-actions">
+                        <div><a href="./edit-article.html"><span><i class="fa fa-pencil" aria-hidden="true"></i></span></a></div>
+                        <div><a href=""><span><i class="fa fa-trash" aria-hidden="true"></i></span></a></div>
+                    </div>
+                </div>
+                <div class="article">
+                    <img src="../../media/article-image-ms.jpg" alt="">
+                    <div class="article-title">
+                        Microsoft brings JavaScript to Excel
+                    </div>
+                    <div class="article-actions">
+                        <div><a href="./edit-article.html"><span><i class="fa fa-pencil" aria-hidden="true"></i></span></a></div>
+                        <div><a href=""><span><i class="fa fa-trash" aria-hidden="true"></i></span></a></div>
+                    </div>
+                </div>
+                <div class="article">
+                    <img src="../../media/article-image-ms.jpg" alt="">
+                    <div class="article-title">
+                        Microsoft brings JavaScript to Excel
+                    </div>
+                    <div class="article-actions">
+                        <div><a href="./edit-article.html"><span><i class="fa fa-pencil" aria-hidden="true"></i></span></a></div>
+                        <div><a href=""><span><i class="fa fa-trash" aria-hidden="true"></i></span></a></div>
+                    </div>
+                </div>
+                <div class="article">
+                    <img src="../../media/article-image-ms.jpg" alt="">
+                    <div class="article-title">
+                        Microsoft brings JavaScript to Excel
+                    </div>
+                    <div class="article-actions">
+                        <div><a href="./edit-article.html"><span><i class="fa fa-pencil" aria-hidden="true"></i></span></a></div>
+                        <div><a href=""><span><i class="fa fa-trash" aria-hidden="true"></i></span></a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+</body>
+
+</html>

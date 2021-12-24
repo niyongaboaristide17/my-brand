@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     margin: 0;
     background-image: #222222;
@@ -31,7 +32,7 @@ main {
 .col-3 {
     /* background-color: yellow; */
     height: 100%;
-    width: 55%;
+    width: 70%;
     /* width: 10%; */
     /* background-color: yellow; */
 }
@@ -39,13 +40,13 @@ main {
 .col-2 {
     /* background-color: pink; */
     height: 100%;
-    width: 50%;
+    width: 20%;
     /* background-color: blue; */
 }
 
 .form-card {
     background-color: #575750;
-    width: 80%;
+    width: 50%;
     height: auto;
     margin: 100px auto;
     border-radius: 15px;
@@ -88,7 +89,7 @@ main {
     position: static;
 }
 
-.btn-contact {
+.btn-sign {
     border: none;
     height: 40px;
     width: 100%;

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | articles</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- <link rel="stylesheet" href="../../css/nav.css"> -->
+    <link rel="stylesheet" href="../../css/edit-article.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="../../media/profile/profile-home.jpg" alt="profile_picture">
+                <h3>Aristide NIYONGABO</h3>
+                <!-- <p>niyongaboaristide17@gmail.com</p> -->
+            </div>
+            <ul>
+                <li>
+                    <a href="../../index.html">
+                        <span class="icon"><i class="fa fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./view-articles.html" class="active">
+                        <span class="icon"><i class="fa fa-newspaper"></i></span>
+                        <span class="item">Articles</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-comment"></i></span>
+                        <span class="item">Queries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="item">Profile</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="../signin.html">
+                        <span><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        <span class="item">Sign out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="container">
+            <div class="edit-panel">
+                <div class="col-1">
+                    <div class="content">
+                        <div class="article-header">
+                            <h1>Create Article</h1>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">Add tile</label>
+                                    <div>
+                                        <input class="form-control" type="text" value="Microsoft brings JavaScript to Excel">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Add content</label>
+                                    <div>
+                                        <textarea value="" name="" id="" cols="10" rows="100" class="form-control-text">At its Ignite conference, Microsoft today announced an update to Excel that brings a new JavaScript API to the venerable spreadsheet app. With this new API, developers will be able to create custom data types and functions based on them.
+
+Over the course of the last few years, Excel started adding a number of new data types, allowing users to pull in stock and geography data from the cloud at first, followed by the addition of Power BI and Power Query data types — which allow users to work with their own data. Now, developers can take this a step further by creating custom data types that make sense for their organizations.</textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="content">
+                        <div>
+                            <img src="../../media/article-image-ms.jpg" alt="">
+                            <div>
+                                <form action="./view-articles.html">
+                                    <button class="btn btn-red">Cancel</button>
+                                </form>
+                            </div>
+                            <div>
+                                <form action="./view-articles.html">
+                                    <button class="btn btn-grey">Save Article</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+</body>
+
+</html>

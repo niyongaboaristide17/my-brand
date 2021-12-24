@@ -75,3 +75,46 @@ main {
     object-fit: cover;
     border-radius: 15px;
 }
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 0;
+        z-index: 1;
+    }
+    .row {
+        display: block;
+        height: auto;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .col-3 {
+        width: 100%;
+        height: auto;
+    }
+    body {
+        height: auto;
+    }
+    html {
+        height: auto;
+    }
+    .portfolio-card {
+        display: block;
+    }
+    .portfolio-card img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    .portfolio {
+        margin: 0 0;
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+}
