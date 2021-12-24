@@ -167,6 +167,7 @@ body.active .wrapper .section {
 .container {
     width: 80%;
     margin: auto;
+    padding-bottom: 40px;
 }
 
 .article-actions div a {
