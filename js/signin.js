@@ -38,16 +38,20 @@ function loginSubmit() {
         return false
     }
 
+
+
     const user = JSON.parse(localStorage.getItem("user"))
     const email = document.getElementById("email-login").value;
     const password = document.getElementById('password-login').value;
 
+    console.log(user.email);
+
     if (user.email === email && user.password === password) {
-        localStorage.setItem("user", {
+        localStorage.setItem("user", JSON.stringify({
             email: 'niyongaboaristide17@gmail.com',
             password: '@Password123',
             isLoggedIn: true
-        })
+        }))
         return true
     } else {
         return false
