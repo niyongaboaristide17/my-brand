@@ -50,22 +50,24 @@
 
             </div>
             <div class="col-3">
-                <form action="./dashboard/view-articles.html">
+                <form onsubmit="return loginSubmit()" action="./dashboard/view-articles.html">
                     <div class="form-card">
                         <div class="form-group">
                             <div>
                                 <label for="email">Name</label>
                                 <div>
-                                    <input type="text" class="form-control" name="email" id="email">
+                                    <input type="text" class="form-control" name="email" id="email-login">
                                 </div>
+                                <span style="color:red" id="email-error"></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <div>
                                 <label for="name">Password</label>
                                 <div>
-                                    <input type="password" class="form-control" name="password" id="password">
+                                    <input type="password" class="form-control" name="password" id="password-login">
                                 </div>
+                                <span style="color:red" id="password-error"></span>
                             </div>
                         </div>
                         <div class="form-group">
@@ -78,6 +80,7 @@
             </div>
         </div>
     </main>
+    <script src="../js/signin.js"></script>
     <script>
         var toogleNav = window.matchMedia("(max-width: 768px)")
 
@@ -88,11 +91,8 @@
             } else {
                 document.getElementById("navbar").style.display = "none"
             }
-            console.log('Hello');
 
         }
-
-        toogle();
     </script>
 </body>
 
