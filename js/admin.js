@@ -13,4 +13,5 @@ const logout = () => {
         password: '@Password123',
         isLoggedIn: false
     }))
+    return true
 }
