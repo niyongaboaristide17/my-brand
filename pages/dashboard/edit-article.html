@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | articles</title>
+    <script src="../../js/admin.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <!-- <link rel="stylesheet" href="../../css/nav.css"> -->
     <link rel="stylesheet" href="../../css/edit-article.css">
@@ -63,7 +64,7 @@
                     </a>
                 </li>
                 <li class="logout">
-                    <a href="../signin.html">
+                    <a onclick="return logout()" href="../signin.html">
                         <span><i class="fa fa-sign-out" aria-hidden="true"></i></span>
                         <span class="item">Sign out</span>
                     </a>

@@ -50,34 +50,38 @@
 
             </div>
             <div class="col-3">
-                <form action="./dashboard/view-articles.html">
-                    <div class="form-card">
-                        <div class="form-group">
+                <!-- <form class="login-form"> -->
+                <div class="form-card">
+                    <div class="form-group">
+                        <div>
+                            <label for="email">Name</label>
                             <div>
-                                <label for="email">Name</label>
-                                <div>
-                                    <input type="text" class="form-control" name="email" id="email">
-                                </div>
+                                <input type="text" class="form-control" name="email" id="email-login">
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label for="name">Password</label>
-                                <div>
-                                    <input type="password" class="form-control" name="password" id="password">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <input class="btn-sign" type="submit" value="Log in">
-                            </div>
+                            <span style="color:red" id="email-error"></span>
                         </div>
                     </div>
-                </form>
+                    <div class="form-group">
+                        <div>
+                            <label for="name">Password</label>
+                            <div>
+                                <input type="password" class="form-control" name="password" id="password-login">
+                            </div>
+                            <span style="color:red" id="password-error"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <input onclick="loginSubmit()" class="btn-sign" type="submit" value="Log in">
+                            <!-- <button>Log in</button> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- </form> -->
             </div>
         </div>
     </main>
+    <script src="../js/signin.js"></script>
     <script>
         var toogleNav = window.matchMedia("(max-width: 768px)")
 
@@ -88,11 +92,8 @@
             } else {
                 document.getElementById("navbar").style.display = "none"
             }
-            console.log('Hello');
 
         }
-
-        toogle();
     </script>
 </body>
 

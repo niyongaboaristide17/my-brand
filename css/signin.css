@@ -124,7 +124,7 @@ main {
         /* margin-bottom: 5px; */
     }
     body {
-        height: auto;
+        height: 100vh;
     }
     html {
         height: 100%;

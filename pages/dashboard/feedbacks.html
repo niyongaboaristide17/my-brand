@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | queries</title>
+    <script src="../../js/admin.js"></script>
+
     <link rel="stylesheet" href="../../css/style.css">
     <!-- <link rel="stylesheet" href="../../css/nav.css"> -->
     <link rel="stylesheet" href="../../css/feedbacks.css">
@@ -63,7 +65,7 @@
                     </a>
                 </li>
                 <li class="logout">
-                    <a href="../signin.html">
+                    <a onclick="return logout()" href="../signin.html">
                         <span><i class="fa fa-sign-out" aria-hidden="true"></i></span>
                         <span class="item">Sign out</span>
                     </a>
@@ -73,8 +75,8 @@
 
         </div>
         <div class="container">
-            <div class="feedback">
-                <div class="feedback-card">
+            <div id="feeds" class="feedback">
+                <!-- <div class="feedback-card">
                     <div class="feedback-content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
@@ -103,11 +105,12 @@
                         <span>15/12/2021</span><br>
                         <span>18:03</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
+    <script src="../../js/feedback.js"></script>
     <script>
         var hamburger = document.querySelector(".hamburger");
         hamburger.addEventListener("click", function() {
