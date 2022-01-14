@@ -51,7 +51,7 @@ function loginSubmit() {
             password: '@Password123',
             isLoggedIn: true
         }))
-        return true
+        window.location.href("../pages/signin.html")
     } else {
         return false
     }

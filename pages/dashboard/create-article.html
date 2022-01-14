@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | articles</title>
     <script src="../../js/admin.js"></script>
+    <script src="../../js/article.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <!-- <link rel="stylesheet" href="../../css/nav.css"> -->
     <link rel="stylesheet" href="../../css/edit-article.css">
@@ -73,50 +74,49 @@
             </ul>
 
         </div>
-        <div class="container">
-            <div class="edit-panel">
-                <div class="col-1">
-                    <div class="content">
-                        <div class="article-header">
-                            <h1>Create Article</h1>
-                            <form action="">
-                                <div class="form-group">
-                                    <label for="">Add tile</label>
-                                    <div>
-                                        <input class="form-control" type="text" value="Microsoft brings JavaScript to Excel">
+        <form action="./view-articles.html" onsubmit="return create()">
+            <div class="container">
+                <div class="edit-panel">
+                    <div class="col-1">
+                        <div class="content">
+                            <div class="article-header">
+                                <h1>Create Article</h1>
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="">Add tile</label>
+                                        <div>
+                                            <input class="form-control" name="title" id="title" type="text">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Add content</label>
-                                    <div>
-                                        <textarea value="" name="" id="" cols="10" rows="100" class="form-control-text">At its Ignite conference, Microsoft today announced an update to Excel that brings a new JavaScript API to the venerable spreadsheet app. With this new API, developers will be able to create custom data types and functions based on them.
-
-Over the course of the last few years, Excel started adding a number of new data types, allowing users to pull in stock and geography data from the cloud at first, followed by the addition of Power BI and Power Query data types — which allow users to work with their own data. Now, developers can take this a step further by creating custom data types that make sense for their organizations.</textarea>
+                                    <div class="form-group">
+                                        <label for="">Add content</label>
+                                        <div>
+                                            <textarea value="" name="content" id="content" cols="10" rows="100" class="form-control-text"></textarea>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="content">
-                        <div>
-                            <img src="../../media/article-image-ms.jpg" alt="">
-                            <div>
-                                <form action="./view-articles.html">
-                                    <button class="btn btn-red">Cancel</button>
                                 </form>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="content">
                             <div>
-                                <form action="./view-articles.html">
-                                    <button class="btn btn-grey">Save Article</button>
-                                </form>
+                                <img id="img-preview" src="../../media/article-image-ms.jpg" alt="">
+                                <input type="file" id="article-image" name="img" accept="image/*">
+                                <div>
+                                    <a class="btn btn-red" href="./view-articles.html">Cancel</a>
+                                </div>
+                                <div>
+
+                                    <button style="cursor: pointer;" class="btn btn-grey">Save Article</button>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 
     <script>
