@@ -51,9 +51,14 @@ function loginSubmit() {
             password: '@Password123',
             isLoggedIn: true
         }))
-        window.location.href("../pages/signin.html")
+        window.location.href = "/pages/dashboard/view-articles.html"
     } else {
         return false
     }
 
 }
+
+// const loginForm = document.querySelector('.login-form')
+// loginForm.addEventListener('submit', () => {
+//     console.log('Login work');
+// })
