@@ -56,40 +56,43 @@
 
             </div>
             <div class="col-3">
-                <div class="form-card">
-                    <div class="form-group">
-                        <div>
-                            <label for="name">Name</label>
+                <form action="" onsubmit="return submitContact()" method="get">
+                    <div class="form-card">
+                        <div class="form-group">
                             <div>
-                                <input type="text" class="form-control" name="name" id="name">
+                                <label for="name">Name</label>
+                                <div>
+                                    <input type="text" class="form-control" name="name" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label for="name">Email</label>
+                                <div>
+                                    <input type="text" class="form-control" name="email" id="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label for="name">Message</label>
+                                <div>
+                                    <textarea class="form-control-textarea" name="message" id="message" cols="100" rows="40"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <input type="submit" class="btn-contact" value="Submit">
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div>
-                            <label for="name">Email</label>
-                            <div>
-                                <input type="text" class="form-control" name="email" id="email">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <label for="name">Message</label>
-                            <div>
-                                <textarea class="form-control-textarea" name="message" id="message" cols="100" rows="40"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <input class="btn-contact" type="button" value="Submit">
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </main>
+    <script src="../js/contact.js"></script>
     <script>
         var toogleNav = window.matchMedia("(max-width: 768px)")
 
@@ -104,7 +107,7 @@
 
         }
 
-        toogle();
+        // toogle();
     </script>
 </body>
 

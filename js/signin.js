@@ -13,7 +13,6 @@ function checkPassword() {
 }
 
 const myCredentials = () => {
-    console.log('Hello Me!');
     localStorage.setItem("user", JSON.stringify({
         email: 'niyongaboaristide17@gmail.com',
         password: '@Password123',
