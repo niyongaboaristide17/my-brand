@@ -1,5 +1,6 @@
 let params = (new URL(document.location)).searchParams;
 let articleId = params.get("article");
+var urlImage
 const getArticles = () => {
     let articles = localStorage.getItem('articles');
     if (articles === null || articles.length === 0) {
@@ -30,10 +31,11 @@ function displaceArticle(id) {
     contentTextArea.innerHTML = article.content
     let image = document.querySelector('#image-preview')
     image.src = article.image
+    urlImage = article.image
 
 }
 
-var urlImage
+
 
 document.getElementById("article-image").addEventListener('change', function() {
     const image = new FileReader();

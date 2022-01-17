@@ -34,17 +34,17 @@ const displayArticles = function() {
         let actionDeleteDiv = document.createElement("div")
         let deleteA = document.createElement("span")
         deleteA.href = "./view-articles.html"
-        console.log(count);
+            // console.log(count);
         let c = count
         deleteA.addEventListener("click", () => {
 
             currentArticles = [...articles]
             currentArticles.splice(c, 1)
 
-            console.log("Clickkkkk");
+            // console.log("Clickkkkk");
             debugger
             localStorage.setItem("articles", JSON.stringify(currentArticles))
-            console.log("DELETING DONE");
+                // console.log("DELETING DONE");
             debugger
 
             window.location.href = "/pages/dashboard/view-articles.html"
@@ -69,7 +69,7 @@ const displayArticles = function() {
 
         articlesDiv.appendChild(articleDiv)
 
-        console.log("Hello");
+        // console.log("Hello");
         count++
     })
 
