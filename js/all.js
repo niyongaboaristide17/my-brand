@@ -8,6 +8,7 @@ const hasAuthenticated = () => {
 
 if (hasAuthenticated) {
     let signinLink = document.querySelector('.signin-link')
-    signinLink.href = "/pages/dashboard/view-articles.html"
+
+    signinLink.setAttribute('href', "/pages/dashboard/view-articles.html")
     signinLink.innerHTML = "ADMIN"
 }
