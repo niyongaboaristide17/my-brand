@@ -44,7 +44,22 @@ const commentArticle = (index, comment) => {
 
 const create = () => {
 
-    debugger
+
+
+
+    // let location;
+    // navigator.geolocation.getCurrentPosition((position) => {
+    //     location = {
+    //         latitude: position.coords.latitude,
+    //         longitude: position.coords.longitude,
+    //     }
+    //     newArticle.location = location
+    //     creatArticle(newArticle)
+    //         // debugger
+    // }, (error) => {
+    //     creatArticle(newArticle)
+    // })
+
     const title = document.getElementById("title").value
     const content = document.getElementById("content").value
 
@@ -52,7 +67,7 @@ const create = () => {
     delete author.isLoggedIn
     delete author.password
 
-    let newArticle = {
+    creatArticle({
         author,
         title,
         content,
@@ -60,21 +75,6 @@ const create = () => {
         comments: [],
         likes: 0,
         date: new Date()
-    }
-
-
-
-    let location;
-    navigator.geolocation.getCurrentPosition((position) => {
-        location = {
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-        }
-        newArticle.location = location
-        creatArticle(newArticle)
-            // debugger
-    }, (error) => {
-        creatArticle(newArticle)
     })
 
     window.location.href = "/pages/dashboard/view-articles.html"
