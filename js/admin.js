@@ -12,6 +12,7 @@ if (!hasAuthenticated()) {
 
 const logout = () => {
     localStorage.setItem("user", JSON.stringify({
+        name: 'NIYONGABO Aristide',
         email: 'niyongaboaristide17@gmail.com',
         password: '@Password123',
         isLoggedIn: false

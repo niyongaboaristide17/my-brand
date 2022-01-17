@@ -44,10 +44,14 @@ const commentArticle = (index, comment) => {
 
 const create = () => {
 
-    console.log('Creating article');
+    navigator.geolocation.getCurrentPosition((success) => {
+
+    }, (error) => {
+
+    })
+
     const title = document.getElementById("title").value
     const content = document.getElementById("content").value
-    debugger
 
     const author = {...JSON.parse(localStorage.getItem("user")) }
     delete author.isLoggedIn
@@ -58,7 +62,9 @@ const create = () => {
         title,
         content,
         image: urlImage,
-        comment: []
+        comments: [],
+        likes: 0,
+        date: new Date()
     })
 
     window.location.href = "/pages/dashboard/view-articles.html"

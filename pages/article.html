@@ -47,9 +47,8 @@
             <div class="col-2">
                 <div class="article-image">
                     <div class="page-title">
-                        Microsoft brings JavaScript to Excel
                     </div>
-                    <img src="../media/article-image-ms.jpg" alt="" srcset="">
+                    <img id="image-big" src="../media/article-image-ms.jpg" alt="" srcset="">
                 </div>
 
             </div>
@@ -58,66 +57,38 @@
                     <div class="article-author">
                         <img class="author-image" src="../media/profile/profile-home.jpg" alt="">
                         <div class="article-description">
-                            <span>Article by </span><span style="font-weight: bold;">Aristide NIYONGABO</span><br><span>11/12/2021</span>
+                            <span>Article by </span><span id="author-name" style="font-weight: bold;"></span><br><span id="article-date">11/12/2021</span>
                         </div>
                     </div>
                     <div class="article-title">
-                        <h3>Microsoft brings JavaScript to Excel</h3>
+                        <h3 id="blog-title"></h3>
                     </div>
                     <div class="article-content">
-                        <p>At its Ignite conference, Microsoft today announced an update to Excel that brings a new JavaScript API to the venerable spreadsheet app. With this new API, developers will be able to create custom data types and functions based
-                            on them.</p>
-                        <p>Over the course of the last few years, Excel started adding a number of new data types, allowing users to pull in stock and geography data from the cloud at first, followed by the addition of Power BI and Power Query data types
-                            — which allow users to work with their own data. Now, developers can take this a step further by creating custom data types that make sense for their organizations.</p>
-                        <p>“Customers will be able to create their own add-ins and extend previously existing ones to capitalize on data types, resulting in a more integrated, next-generation experience within Excel,” Microsoft explains in its press materials.
-                            “They can share these data types across the organization and create add-ins or solutions that connect data types to their own service or data. The API gives power to users and developers, allowing them to better organize, access
-                            and work with their data.”</p>
-                        <p>Microsoft already worked with Bloomberg to help that company trial these custom data types.</p>
+
                     </div>
                     <hr>
                     <div class="article-like">
-                        <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span><span class="article-like-count">10</span>
+                        <span><i id="icon-like" class="fa fa-thumbs-up" aria-hidden="true"></i></span><span class="article-like-count">10</span>
                     </div>
                     <hr>
                     <div class="article-comment">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Write your comment..."></textarea>
-                        <button>Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        <input class="comment-person" type="text" placeholder="Enter you name"><br>
+                        <textarea class="comment-content" cols="30" rows="10" placeholder="Write your comment..."></textarea>
+                        <button id="comment-btn">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                     </div>
                     <div class="article-comments">
                         <h3>Comments</h3>
-                        <div class="a-comment">
-                            <div class="comment-header">
-                                <div><span style="color:#C4C4C4; font-size: 14px">Messi</span></div>
-                                <div><span style="color:#C4C4C4; font-size: 14px">12:06 13/12/2021</span></div>
-                            </div>
-                            <div class="commment-body">
-                                <p>Amazing!!!</p>
-                            </div>
-                        </div>
-                        <div class="a-comment">
-                            <div class="comment-header">
-                                <div><span style="color:#C4C4C4; font-size: 14px">Messi</span></div>
-                                <div><span style="color:#C4C4C4; font-size: 14px">12:06 13/12/2021</span></div>
-                            </div>
-                            <div class="commment-body">
-                                <p>Woww!!!</p>
-                            </div>
-                        </div>
-                        <div class="a-comment">
-                            <div class="comment-header">
-                                <div><span style="color:#C4C4C4; font-size: 14px">Messi</span></div>
-                                <div><span style="color:#C4C4C4; font-size: 14px">12:06 13/12/2021</span></div>
-                            </div>
-                            <div class="commment-body">
-                                <p>&#9989;&#9989;&#9989;&#9989; great!!!</p>
-                            </div>
-                        </div>
+
+
+
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="/js/singleArticle.js"></script>
     <script src="/js/all.js"></script>
+
     <script>
         var toogleNav = window.matchMedia("(max-width: 768px)")
 
@@ -132,7 +103,7 @@
 
         }
 
-        toogle();
+        // toogle();
     </script>
 </body>
 
