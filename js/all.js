@@ -5,10 +5,11 @@ const hasAuthenticated = () => {
     }
     return user.isLoggedIn
 }
-
-if (hasAuthenticated) {
-    let signinLink = document.querySelector('.signin-link')
+let signinLink = document.querySelector('.signin-link')
+if (hasAuthenticated()) {
 
     signinLink.setAttribute('href', "/pages/dashboard/view-articles.html")
     signinLink.innerHTML = "ADMIN"
+} else {
+    signinLink.innerHTML = "SIGNIN"
 }
