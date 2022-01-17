@@ -1,5 +1,8 @@
 const hasAuthenticated = () => {
     const user = JSON.parse(localStorage.getItem("user"))
+    if (user == null || user == undefined) {
+        return false
+    }
     return user.isLoggedIn
 }
 

@@ -1,3 +1,19 @@
+var urlImage
+
+document.getElementById("article-image").addEventListener('change', function() {
+    const image = new FileReader();
+    image.readAsDataURL(this.files[0]);
+    image.addEventListener("load", () => {
+
+        urlImage = image.result;
+        document.getElementById("img-preview").src = urlImage;
+        debugger
+    })
+
+
+
+})
+
 const getArticles = () => {
     articles = localStorage.getItem('articles');
     if (articles === null || articles.length === 0) {
@@ -15,6 +31,7 @@ const creatArticle = (article) => {
 
 const getArticle = (index) => {
     return getArticles()[index]
+
 }
 
 const commentArticle = (index, comment) => {
@@ -25,19 +42,25 @@ const commentArticle = (index, comment) => {
     }
 }
 
-let create = () => {
+const create = () => {
 
     console.log('Creating article');
     const title = document.getElementById("title").value
     const content = document.getElementById("content").value
+    debugger
 
-    const image = document.getElementById("article-image").value
+    const author = {...JSON.parse(localStorage.getItem("user")) }
+    delete author.isLoggedIn
+    delete author.password
 
     creatArticle({
+        author,
         title,
         content,
-        image,
+        image: urlImage,
         comment: []
     })
 
+    window.location.href = "/pages/dashboard/view-articles.html"
+    debugger
 }

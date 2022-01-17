@@ -83,15 +83,13 @@
                                 <div class="form-group">
                                     <label for="">Edit tile</label>
                                     <div>
-                                        <input class="form-control" type="text" value="Microsoft brings JavaScript to Excel">
+                                        <input id="article-title" class="form-control" type="text" value="">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Edit content</label>
                                     <div>
-                                        <textarea value="" name="" id="" cols="10" rows="100" class="form-control-text">At its Ignite conference, Microsoft today announced an update to Excel that brings a new JavaScript API to the venerable spreadsheet app. With this new API, developers will be able to create custom data types and functions based on them.
-
-Over the course of the last few years, Excel started adding a number of new data types, allowing users to pull in stock and geography data from the cloud at first, followed by the addition of Power BI and Power Query data types — which allow users to work with their own data. Now, developers can take this a step further by creating custom data types that make sense for their organizations.</textarea>
+                                        <textarea value="" name="" id="article-content" cols="10" rows="100" class="form-control-text"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -101,16 +99,14 @@ Over the course of the last few years, Excel started adding a number of new data
                 <div class="col-2">
                     <div class="content">
                         <div>
-                            <img src="../../media/article-image-ms.jpg" alt="">
+                            <img id="image-preview" src="https://via.placeholder.com/150" alt="">
+                            <input type="file" id="article-image" accept="image/*" required>
                             <div>
-                                <form action="./view-articles.html">
-                                    <button class="btn btn-red">Cancel</button>
-                                </form>
+                                <a style="width: 100%; height: 30px" class="btn btn-red" href="../dashboard/view-articles.html">CANCEL</a>
                             </div>
                             <div>
-                                <form action="./view-articles.html">
-                                    <button class="btn btn-grey">Save change</button>
-                                </form>
+                                <input type="button" onclick="doUpdate()" class="btn btn-grey" value="Save change">
+
                             </div>
                         </div>
                     </div>
@@ -118,7 +114,7 @@ Over the course of the last few years, Excel started adding a number of new data
             </div>
         </div>
     </div>
-
+    <script src="../../js/update-article.js"></script>
     <script>
         var hamburger = document.querySelector(".hamburger");
         hamburger.addEventListener("click", function() {
