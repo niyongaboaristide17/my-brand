@@ -42,10 +42,12 @@ const displayArticles = function() {
             currentArticles.splice(c, 1)
 
             // console.log("Clickkkkk");
-            debugger
-            localStorage.setItem("articles", JSON.stringify(currentArticles))
-                // console.log("DELETING DONE");
-            debugger
+            // debugger
+            if (confirm("Are you sure you want to delete?") == true) {
+                localStorage.setItem("articles", JSON.stringify(currentArticles))
+            }
+            // console.log("DELETING DONE");
+            // debugger
 
             window.location.href = "/pages/dashboard/view-articles.html"
 
