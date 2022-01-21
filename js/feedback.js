@@ -9,6 +9,9 @@ function getComments() {
 
 }
 
+let userLoc;
+
+
 let displayComments = () => {
 
     let feedbackContent = document.getElementById("feeds")
@@ -52,5 +55,9 @@ let displayComments = () => {
 
     });
 }
+
+
+
+
 
 displayComments()

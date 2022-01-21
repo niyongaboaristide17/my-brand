@@ -56,42 +56,43 @@
 
             </div>
             <div class="col-3">
-                <form action="" onsubmit="return submitContact()" method="get">
-                    <div class="form-card">
-                        <div class="form-group">
+                <!-- <form action="" onsubmit="return submitContact()" method="get"> -->
+                <div class="form-card">
+                    <div class="form-group">
+                        <div>
+                            <label for="name">Name</label>
                             <div>
-                                <label for="name">Name</label>
-                                <div>
-                                    <input type="text" class="form-control" name="name" id="name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label for="name">Email</label>
-                                <div>
-                                    <input type="text" class="form-control" name="email" id="email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label for="name">Message</label>
-                                <div>
-                                    <textarea class="form-control-textarea" name="message" id="message" cols="100" rows="40"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <input type="submit" class="btn-contact" value="Submit">
+                                <input type="text" class="form-control" name="name" id="name">
                             </div>
                         </div>
                     </div>
-                </form>
+                    <div class="form-group">
+                        <div>
+                            <label for="name">Email</label>
+                            <div>
+                                <input type="text" class="form-control" name="email" id="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="name">Message</label>
+                            <div>
+                                <textarea class="form-control-textarea" name="message" id="message" cols="100" rows="40"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <input onclick="submitContact()" type="button" class="btn-contact" value="Submit">
+                        </div>
+                    </div>
+                </div>
+                <!-- </form> -->
             </div>
         </div>
     </main>
+    <!-- <script src=https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap async defer '></script> -->
     <script src="/js/all.js"></script>
     <script src="../js/contact.js"></script>
     <script>
@@ -104,7 +105,7 @@
             } else {
                 document.getElementById("navbar").style.display = "none"
             }
-            console.log('Hello');
+            console.log('Hello ');
 
         }
 
