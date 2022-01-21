@@ -71,5 +71,5 @@ const submitContact = () => {
         // loc,
     })
 
-    return true
+    window.location.href = '/pages/contact.html'
 }
