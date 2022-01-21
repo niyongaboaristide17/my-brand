@@ -30,7 +30,7 @@ const createComment = (comment) => {
     localStorage.setItem("comments", JSON.stringify(comments))
 }
 
-// let loc = {};
+let loc = {};
 const submitContact = () => {
     if (checkEmail() == false && checkName() == false && checkMessage() == false) {
         document.getElementById("email").placeholder = "Valid Email required"
@@ -61,15 +61,37 @@ const submitContact = () => {
     }
 
 
-    // getLocation()
+    // addLocation()
 
-    createComment({
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-        date: new Date(),
-        // loc,
+    navigator.geolocation.getCurrentPosition((position) => {
+        loc = {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+        }
+        createComment({
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+            date: new Date(),
+            loc,
+        })
+        console.log(loc);
+    }, error => {
+        loc = {}
+        createComment({
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+            date: new Date(),
+            loc,
+        })
     })
 
-    window.location.href = '/pages/contact.html'
+
+
+    // window.location.href = '/pages/contact.html'
 }
+
+// function addLocation() {
+
+// }
