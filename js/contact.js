@@ -30,7 +30,7 @@ const createComment = (comment) => {
     localStorage.setItem("comments", JSON.stringify(comments))
 }
 
-let loc = {};
+// let loc = {};
 const submitContact = () => {
     if (checkEmail() == false && checkName() == false && checkMessage() == false) {
         document.getElementById("email").placeholder = "Valid Email required"
@@ -61,14 +61,14 @@ const submitContact = () => {
     }
 
 
-    getLocation()
+    // getLocation()
 
     createComment({
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
         date: new Date(),
-        loc,
+        // loc,
     })
 
     return true
