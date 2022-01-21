@@ -14,6 +14,7 @@ function checkPassword() {
 
 const myCredentials = () => {
     localStorage.setItem("user", JSON.stringify({
+        name: 'NIYONGABO Aristide',
         email: 'niyongaboaristide17@gmail.com',
         password: '@Password123',
         isLoggedIn: false
@@ -47,6 +48,7 @@ function loginSubmit() {
 
     if (user.email === email && user.password === password) {
         localStorage.setItem("user", JSON.stringify({
+            name: 'NIYONGABO Aristide',
             email: 'niyongaboaristide17@gmail.com',
             password: '@Password123',
             isLoggedIn: true

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | articles</title>
     <script src="../../js/admin.js"></script>
-    <script src="../../js/article.js"></script>
+
     <link rel="stylesheet" href="../../css/style.css">
     <!-- <link rel="stylesheet" href="../../css/nav.css"> -->
     <link rel="stylesheet" href="../../css/edit-article.css">
@@ -74,51 +74,49 @@
             </ul>
 
         </div>
-        <form action="./view-articles.html" onsubmit="return create()">
-            <div class="container">
-                <div class="edit-panel">
-                    <div class="col-1">
-                        <div class="content">
-                            <div class="article-header">
-                                <h1>Create Article</h1>
-                                <form action="">
-                                    <div class="form-group">
-                                        <label for="">Add tile</label>
-                                        <div>
-                                            <input class="form-control" name="title" id="title" type="text" required>
-                                        </div>
+        <!-- <form action="./view-articles.html" onsubmit="return create()"> -->
+        <div class="container">
+            <div class="edit-panel">
+                <div class="col-1">
+                    <div class="content">
+                        <div class="article-header">
+                            <h1>Create Article</h1>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="">Add tile</label>
+                                    <div>
+                                        <input class="form-control" name="title" id="title" type="text" required>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Add content</label>
-                                        <div>
-                                            <textarea value="" name="content" id="content" cols="10" rows="100" class="form-control-text" required></textarea>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Add content</label>
+                                    <div>
+                                        <textarea value="" name="content" id="content" cols="10" rows="100" class="form-control-text" required></textarea>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="content">
+                </div>
+                <div class="col-2">
+                    <div class="content">
+                        <div>
+                            <img id="img-preview" src="https://via.placeholder.com/150" alt="">
+                            <input type="file" id="article-image" name="img" accept="image/*" required>
                             <div>
-                                <img id="img-preview" src="../../media/article-image-ms.jpg" alt="">
-                                <input type="file" id="article-image" name="img" accept="image/*" required>
-                                <div>
-                                    <a class="btn btn-red" href="./view-articles.html">Cancel</a>
-                                </div>
-                                <div>
-
-                                    <button style="cursor: pointer;" class="btn btn-grey">Save Article</button>
-
-                                </div>
+                                <a class="btn btn-red" href="./view-articles.html">Cancel</a>
+                            </div>
+                            <div>
+                                <input type="button" value="SAVE" onclick="create()" style="cursor: pointer;" class="btn btn-grey">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
+        <!-- </form> -->
     </div>
-
+    <script src="../../js/article.js"></script>
     <script>
         var hamburger = document.querySelector(".hamburger");
         hamburger.addEventListener("click", function() {
