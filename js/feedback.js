@@ -1,8 +1,14 @@
+let token = JSON.parse(localStorage.getItem('AccessToken'))
 let displayComments = () => {
 
     let feedbackContent = document.getElementById("feeds")
 
-    fetch('https://aristide-my-brand-api.herokuapp.com/api/v1/queries')
+    fetch('https://aristide-my-brand-api.herokuapp.com/api/v1/queries', {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        }
+    })
         .then(res => res.json())
         .then(data => {
             data.reverse().forEach(query => {

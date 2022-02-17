@@ -71,13 +71,15 @@ const submitContact = () => {
         })
         .then(function (payload) {
             console.log(payload);
+            const country = payload.location.country.name
+            const city = payload.location.city ? payload.location.city : payload.location.country.capital
             let message = {
                 sender:{
                     name: document.getElementById("name").value,
                     email: document.getElementById("email").value
                 },
                 message: document.getElementById("message").value,
-                location: payload.location.country.name + ', ' + payload.location.city
+                location: country + ', ' + city
             }
             console.log(message);
             
