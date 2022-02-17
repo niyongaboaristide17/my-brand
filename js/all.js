@@ -1,11 +1,13 @@
 const hasAuthenticated = () => {
-    const user = JSON.parse(localStorage.getItem("user"))
-    if (user == null || user == undefined) {
+    const token = JSON.parse(localStorage.getItem("AccessToken"))
+    if (token == null || token == undefined) {
         return false
     }
-    return user.isLoggedIn
+    return true
 }
+
 let signinLink = document.querySelector('.signin-link')
+
 if (hasAuthenticated()) {
 
     signinLink.setAttribute('href', "/pages/dashboard/view-articles.html")
