@@ -40,23 +40,55 @@ function loginSubmit() {
 
 
 
-    const user = JSON.parse(localStorage.getItem("user"))
+    // const user = JSON.parse(localStorage.getItem("user"))
     const email = document.getElementById("email-login").value;
     const password = document.getElementById('password-login').value;
 
-    console.log(user.email);
+    const postData = async (url = '', data = {}) => {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/JSON,text/plain,*/*,',
+                'Content-type': 'application/json',
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer',
+            body: JSON.stringify(data),
+        });
+        return response.json();
+    };
 
-    if (user.email === email && user.password === password) {
-        localStorage.setItem("user", JSON.stringify({
-            name: 'NIYONGABO Aristide',
-            email: 'niyongaboaristide17@gmail.com',
-            password: '@Password123',
-            isLoggedIn: true
-        }))
-        window.location.href = "/pages/dashboard/view-articles.html"
-    } else {
-        return false
-    }
+    const user = {
+        email: email,
+        password: password,
+    };
+    postData('https://aristide-my-brand-api.herokuapp.com/api/v1/users/login', user).then(
+        (data) => {
+            if (data.status == 200) {
+                window.localStorage.setItem(
+                    'AccessToken',
+                    JSON.stringify(data.accessToken)
+                );
+                window.location.href = "/pages/dashboard/view-articles.html"
+            } else {
+                err.innerHTML = data.message;
+            }
+        }
+    );
+
+    // console.log(user.email);
+
+    // if (user.email === email && user.password === password) {
+    //     localStorage.setItem("user", JSON.stringify({
+    //         name: 'NIYONGABO Aristide',
+    //         email: 'niyongaboaristide17@gmail.com',
+    //         password: '@Password123',
+    //         isLoggedIn: true
+    //     }))
+    //     window.location.href = "/pages/dashboard/view-articles.html"
+    // } else {
+    //     return false
+    // }
 
 }
 

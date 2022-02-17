@@ -1,16 +1,14 @@
 var urlImage
 
-document.getElementById("article-image").addEventListener('change', function() {
+document.getElementById("article-image").addEventListener('change', function () {
     const image = new FileReader();
     image.readAsDataURL(this.files[0]);
     image.addEventListener("load", () => {
 
         urlImage = image.result;
         document.getElementById("img-preview").src = urlImage;
-        debugger
+
     })
-
-
 
 })
 
@@ -62,21 +60,48 @@ const create = () => {
 
     const title = document.getElementById("title").value
     const content = document.getElementById("content").value
-
-    const author = {...JSON.parse(localStorage.getItem("user")) }
-    delete author.isLoggedIn
-    delete author.password
-
-    creatArticle({
-        author,
-        title,
-        content,
-        image: urlImage,
-        comments: [],
-        likes: 0,
-        date: new Date()
+    const image = document.getElementById("article-image").files[0]
+    console.log(image);
+    let token = JSON.parse(localStorage.getItem('AccessToken'))
+    const formData = new FormData();
+    formData.append('image', image);
+    formData.append("title", title);
+    formData.append("content", content);
+    let check = fetch('https://aristide-my-brand-api.herokuapp.com/api/v1/articles', {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        },
+        body: formData
     })
+    .then((res) => res.json())
+    .then((data) => {
+            console.log(data)
+            window.location.href = "/pages/dashboard/view-articles.html"
+        });
+    // if (check) {
 
-    window.location.href = "/pages/dashboard/view-articles.html"
-        // debugger
+    //     debugger
+        // window.location.href = "/pages/dashboard/view-articles.html"
+    // } else {
+    //     alert("Artice not created");
+    // }
+
+    // const author = {...JSON.parse(localStorage.getItem("user")) }
+    // delete author.isLoggedIn
+    // delete author.password
+
+    // creatArticle({
+    //     author,
+    //     title,
+    //     content,
+    //     image: urlImage,
+    //     comments: [],
+    //     likes: 0,
+    //     date: new Date()
+    // })
+
+    // window.location.href = "/pages/dashboard/view-articles.html"
+    // debugger
 }
+

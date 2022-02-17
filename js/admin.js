@@ -1,9 +1,9 @@
 const hasAuthenticated = () => {
-    const user = JSON.parse(localStorage.getItem("user"))
-    if (user == null || user == undefined) {
+    const token = JSON.parse(localStorage.getItem("AccessToken"))
+    if (token == null || token == undefined) {
         return false
     }
-    return user.isLoggedIn
+    return true
 }
 
 if (!hasAuthenticated()) {
@@ -11,11 +11,6 @@ if (!hasAuthenticated()) {
 }
 
 const logout = () => {
-    localStorage.setItem("user", JSON.stringify({
-        name: 'NIYONGABO Aristide',
-        email: 'niyongaboaristide17@gmail.com',
-        password: '@Password123',
-        isLoggedIn: false
-    }))
+    localStorage.removeItem('AccessToken')
     return true
 }

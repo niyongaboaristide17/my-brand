@@ -1,33 +1,20 @@
-function getComments() {
-    let comments = localStorage.getItem('comments')
-    if (comments === null || comments.length === 0) {
-        localStorage.setItem("comments", JSON.stringify([]))
-        return []
-    }
-    return JSON.parse(localStorage.getItem('comments'))
-
-
-}
-
-let userLoc;
-
-
+let token = JSON.parse(localStorage.getItem('AccessToken'))
 let displayComments = () => {
 
     let feedbackContent = document.getElementById("feeds")
 
-    getComments().forEach(comment => {
+    fetch('https://aristide-my-brand-api.herokuapp.com/api/v1/queries', {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + token,
+        }
+    })
+        .then(res => res.json())
+        .then(data => {
+            data.reverse().forEach(query => {
 
-
-        fetch('https://api.ipregistry.co/?key=zhix4uxegf7m3066')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(payload) {
-                loc = payload.location.country.name
                 let p = document.createElement("p")
-                p.innerHTML = comment.message
-
+                p.innerHTML = query.message
 
                 let content = document.createElement("div")
                 content.className = "feedback-content"
@@ -37,12 +24,12 @@ let displayComments = () => {
                 sentInfo.className = "sender-info"
 
                 let spanEmail = document.createElement("span")
-                spanEmail.innerHTML = comment.email
+                spanEmail.innerHTML = query.sender.email
                 let spanDate = document.createElement("span")
-                date = new Date(comment.date)
+                let date = new Date(query.created_on + "")
                 spanDate.innerHTML = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
                 let spanTime = document.createElement("span")
-                time = comment.date
+                time = query.date
                 spanTime.innerHTML = date.getHours() + ':' + date.getMinutes()
                 let br = document.createElement("br")
                 let br1 = document.createElement("br")
@@ -53,7 +40,7 @@ let displayComments = () => {
                 sentInfo.appendChild(spanTime)
                 sentInfo.appendChild(document.createElement("br"))
                 let span3 = document.createElement('span')
-                span3.innerHTML = loc
+                span3.innerHTML = query.location
                 sentInfo.appendChild(span3)
                 sentInfo.appendChild(span3)
 
@@ -63,13 +50,11 @@ let displayComments = () => {
                 card.appendChild(sentInfo)
 
                 feedbackContent.appendChild(card)
-                console.log(payload.location.country.name + ', ' + payload.location.city);
-            });
+
+            })
+        })
 
 
-
-
-    });
 }
 
 
